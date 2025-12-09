@@ -121,6 +121,10 @@ details p {
   color: #f0e6f6;
 }
 
+.perspective p {
+  margin-bottom: 20px; /* adds extra space between paragraphs */
+}
+
 /* ===== Footer ===== */
 footer {
   text-align: center;
