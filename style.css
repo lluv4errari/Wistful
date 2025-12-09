@@ -104,12 +104,12 @@ details p {
   margin-top: 5px;
 }
 
-/* ===== Perspective Section ===== */
+/* ===== Perspective Section (Behind the Eye) ===== */
 .perspective {
   max-width: 900px;
   margin: 50px auto;
-  text-align: center;
-  line-height: 1.6;
+  text-align: left; /* left-aligned for readability */
+  line-height: 1.8; /* slightly more spacing for reading */
   color: #ccc;
   padding: 20px;
   border-top: 1px solid #333;
@@ -117,12 +117,14 @@ details p {
 
 .perspective h2 {
   font-size: 2em;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   color: #f0e6f6;
+  text-align: center; /* keep heading centered */
 }
 
+/* Add extra spacing between paragraphs */
 .perspective p {
-  margin-bottom: 20px; /* adds extra space between paragraphs */
+  margin-bottom: 25px; /* bigger gap between mini paragraphs */
 }
 
 /* ===== Footer ===== */
