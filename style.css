@@ -58,3 +58,28 @@ footer {
   font-size: 0.9em;
   color: #888;
 }
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  margin-top: 8px;
+  font-size: 0.95em;
+  color: #ccc;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 5px;
+  color: #f0e6f6;
+}
+
+details[open] summary {
+  color: #fff;
+}
+
+details p {
+  margin-top: 5px;
+}
