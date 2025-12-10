@@ -237,12 +237,8 @@
   </script>
   <!-- Background Music -->
 <!-- YouTube Background Music -->
-<div id="youtubeMusic" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
-  <iframe id="ytPlayer" width="0" height="0"
-    src="https://www.youtube.com/embed/DqjWFZN82_A?autoplay=1&loop=1&playlist=DqjWFZN82_A&controls=0&disablekb=1&modestbranding=1"
-    title="YouTube Music Player" frameborder="0"
-    allow="autoplay; encrypted-media" allowfullscreen>
-  </iframe>
+<div id="audioPlayer" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
+  <audio id="bgMusic" src="bgMusic.m4a" autoplay loop></audio>
   <button id="musicToggle" style="
     background-color: #1a1a1a;
     color: #f0e6f6;
@@ -255,24 +251,23 @@
   </button>
 </div>
 
-<script>
-  let isPlaying = true;
-  const toggleBtn = document.getElementById('musicToggle');
-  const ytPlayer = document.getElementById('ytPlayer');
 
-  toggleBtn.addEventListener('click', () => {
-    const src = ytPlayer.src;
-    if (isPlaying) {
-      // Pause: stop autoplay by reloading without autoplay param
-      ytPlayer.src = src.replace('?autoplay=1', '?autoplay=0');
-      toggleBtn.textContent = '🔇 Play Music';
-    } else {
-      // Play
-      ytPlayer.src = src.replace('?autoplay=0', '?autoplay=1');
-      toggleBtn.textContent = '🔊 Pause Music';
-    }
-    isPlaying = !isPlaying;
-  });
+<script>
+  const music = document.getElementById('bgMusic');
+const toggleBtn = document.getElementById('musicToggle');
+let isPlaying = true; // starts playing by default
+
+toggleBtn.addEventListener('click', () => {
+  if (isPlaying) {
+    music.pause();
+    toggleBtn.textContent = '🔇 Play Music';
+  } else {
+    music.play();
+    toggleBtn.textContent = '🔊 Pause Music';
+  }
+  isPlaying = !isPlaying;
+});
+
 </script>
 
 </body>
