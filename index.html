@@ -238,7 +238,7 @@
   <!-- Background Music -->
 <!-- YouTube Background Music -->
 <div id="audioPlayer" style="position: fixed; bottom: 20px; right: 20px; z-index: 1000;">
-  <audio id="bgMusic" src="bgMusic.m4a" autoplay loop></audio>
+  <audio id="bgMusic" src="bgMusic.m4a" autoplay loop muted></audio>
   <button id="musicToggle" style="
     background-color: #1a1a1a;
     color: #f0e6f6;
@@ -251,24 +251,32 @@
   </button>
 </div>
 
-
 <script>
   const music = document.getElementById('bgMusic');
-const toggleBtn = document.getElementById('musicToggle');
-let isPlaying = true; // starts playing by default
+  const toggleBtn = document.getElementById('musicToggle');
+  let isPlaying = true; // toggle button state
 
-toggleBtn.addEventListener('click', () => {
-  if (isPlaying) {
-    music.pause();
-    toggleBtn.textContent = '🔇 Play Music';
-  } else {
-    music.play();
-    toggleBtn.textContent = '🔊 Pause Music';
-  }
-  isPlaying = !isPlaying;
-});
+  // Unlock autoplay on first user click
+  window.addEventListener('click', () => {
+    if(music.muted) {
+      music.muted = false; // unmute
+      music.play();        // start playing
+    }
+  }, { once: true }); // only runs once
 
+  // Toggle button functionality
+  toggleBtn.addEventListener('click', () => {
+    if (isPlaying) {
+      music.pause();
+      toggleBtn.textContent = '🔇 Play Music';
+    } else {
+      music.play();
+      toggleBtn.textContent = '🔊 Pause Music';
+    }
+    isPlaying = !isPlaying;
+  });
 </script>
+
 
 </body>
 </html>
