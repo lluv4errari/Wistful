@@ -33,7 +33,6 @@
 
     <!-- GALLERY -->
     <section class="tab-content" id="gallery">
-
       <figure>
         <img src="Photo1.jpg" alt="Photo 1" class="zoomable">
         <figcaption>
@@ -44,7 +43,6 @@
           </details>
         </figcaption>
       </figure>
-
       <figure>
         <img src="Photo2.jpg" alt="Photo 2" class="zoomable">
         <figcaption>
@@ -55,7 +53,6 @@
           </details>
         </figcaption>
       </figure>
-
       <figure>
         <img src="Photo3.jpg" alt="Photo 3" class="zoomable">
         <figcaption>
@@ -66,7 +63,6 @@
           </details>
         </figcaption>
       </figure>
-
       <figure>
         <img src="Photo4.jpg" alt="Photo 4" class="zoomable">
         <figcaption>
@@ -77,7 +73,6 @@
           </details>
         </figcaption>
       </figure>
-
       <figure>
         <img src="Photo5.jpg" alt="Photo 5" class="zoomable">
         <figcaption>
@@ -88,7 +83,6 @@
           </details>
         </figcaption>
       </figure>
-
       <figure>
         <img src="Photo6.jpg" alt="Photo 6" class="zoomable">
         <figcaption>
@@ -99,7 +93,6 @@
           </details>
         </figcaption>
       </figure>
-
       <figure>
         <img src="Photo7.jpg" alt="Photo 7" class="zoomable">
         <figcaption>
@@ -110,7 +103,6 @@
           </details>
         </figcaption>
       </figure>
-
       <figure>
         <img src="Photo8.jpg" alt="Photo 8" class="zoomable">
         <figcaption>
@@ -121,7 +113,6 @@
           </details>
         </figcaption>
       </figure>
-
       <figure>
         <img src="Photo9.jpg" alt="Photo 9" class="zoomable">
         <figcaption>
@@ -132,7 +123,6 @@
           </details>
         </figcaption>
       </figure>
-
       <figure>
         <img src="Photo10.jpg" alt="Photo 10" class="zoomable">
         <figcaption>
@@ -143,23 +133,26 @@
           </details>
         </figcaption>
       </figure>
-
     </section>
 
     <!-- BEHIND THE EYE -->
     <section class="tab-content" id="perspective">
       <h2>Behind the Eye</h2>
       <p>They say a picture is worth 1000 words. What can these words be? Questions? Answers? Both? None? Are those words telling you a story behind the picture? Or rather, is it silent and letting you pick 1000 words?</p>
-      <!-- ...rest of your Behind the Eye content... -->
+      <p>Biology is the study of life. It not only explains the living world around us, but also organizes it in order. From the organelles to our cells to taxonomic classifications, orderedness is deeply rooted in us. In relation, we as humans are wired to recognize patterns and structures around us, in other words, the order. Our ancestors did this not as a means to admire, but to survive.</p>
+      <p>To organize, we must recognize the order. Going back to our ancestors, there had to be a point in time where we didn’t know the structural hierarchy of organisms. In order to create that hierarchy we had to recognize it, and give it purpose to create such a grouping (atoms, organisms, communities, etc). Because recognition and ordering is rooted into us as humans, the philosophy behind it questions what it really means to recognize something in the first place. This leads to the philosophy of recognition theory of meaning/purpose. What does it mean to recognize, especially when you’re looking at a picture? You see an image that is static in the fourth dimension (time), but displays the third dimension (the subject in the picture) on a second dimensional object (the object you are viewing the picture on). Unconsciously knowing it, you likely will notice patterns in these pictures. However, what is the purpose of the order you recognized? You’ll most likely answer with nothing. We don’t know the purpose. I haven’t explicitly stated; nor can you see in the picture what exactly the meaning of the piece is. If this is the case, then shouldn’t these pictures be deemed as “meaningless?” And if this logic proves to be true, doesn’t that mean there essentially is no order? Philosophers Husserl & Heidegger would ironically argue meaning isn’t inherent at all.</p>
+      <!-- rest of your Behind the Eye content -->
       <p>In regards to photography, it truly is fascinating how concepts such as math and philosophy can tie in so deeply with photography, particularly in this art style. It makes you question and reflect on your own knowledge, despite the limited subjects presented to you in the photograph.</p>
     </section>
 
     <!-- INTENT -->
     <section class="tab-content" id="intent">
       <h2>Intent</h2>
-      <p>My eye for art stems from my fascination in photographs that evoke a feeling of uncertainty and possible surrealism within them. I hope for you to notice this in my work. I intend for these photographs to capture a sense of longing for nostalgia, but with a hint of eeriness underlying within, hence why I decided to call my online space “Wistful.”</p>
-      <p>Every photograph published on this site made me feel some uncertainty when experiencing the scene – both in real life while photographing, and looking at the photo itself. You may recognize my work as “liminal spaces,” which has been a great interest in the realm of art for me since 2018.</p>
-      <p>While I understand this particular style of photography may not be significant to everyone, but for those who do connect to it on a deeper level, such as myself, I would hope for you to see my vision and potential in these photographs which adhere to the topic of nostalgia and eeriness, thus making it unsettling and interesting nonetheless.</p>
+      <p>I believe a picture doesn’t only capture what you’re looking at, but it captures a feeling. The feeling I hope to explore isn’t one word, rather, it's a compilation of many. Surreal, confused, vague, etc. This is where my eye for art stems from. I hope for you to notice this in my work. I intend for these photographs to capture a sense of longing for nostalgia, but with a hint of eeriness underlying within, hence why I decided to call my online space “Wistful.”</p>
+      <p>Every photograph published on this site made me feel some uncertainty when experiencing the scene – both in real life while photographing, and then later on looking at the photo itself. You may recognize my work as “liminal spaces,” which has been a great interest in the realm of art for years now.</p>
+      <p>I understand this particular style of photography may not be resonate with everyone; but for those who do connect to it on a deeper level, such as myself, I would hope for you to see my vision and potential in these photographs which adhere to the topics of nostalgia and eeriness, and much, much more,  thus making it unsettling and interesting nonetheless.</p>
+      <p>All photos are taken on an iPhone camera, with using various apps and softwares to edit the photos to get low resolution and poor quality tint. This effect makes it look like it was taken on an old digital camera.</p>
+      <p>If you have any questions or inquiries, you may contact me at: LS.photographs@outlook.com</p>
     </section>
 
   </main>
@@ -200,8 +193,8 @@
     const sections = document.querySelectorAll(".tab-content");
 
     function showTab(targetId) {
-      sections.forEach(sec => sec.classList.remove("active"));
-      document.getElementById(targetId).classList.add("active");
+      sections.forEach(sec => sec.style.display = "none");
+      document.getElementById(targetId).style.display = "block";
     }
 
     tabs.forEach(tab => {
