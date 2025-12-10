@@ -56,17 +56,27 @@ header .description {
   color: #c0c0c0;
 }
 
-/* ===== Gallery ===== */
+/* ===== Gallery (Horizontal Scroll) ===== */
 .gallery {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
   gap: 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  overflow-x: auto;
+  padding: 10px 20px;
+  scroll-behavior: smooth;
+}
+
+.gallery::-webkit-scrollbar {
+  height: 8px;
+}
+
+.gallery::-webkit-scrollbar-thumb {
+  background-color: #555;
+  border-radius: 4px;
 }
 
 .gallery img {
-  width: 100%;
+  flex: 0 0 auto;
+  width: 250px; /* image size */
   height: auto;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.5);
@@ -105,8 +115,9 @@ details p {
   margin-top: 5px;
 }
 
-/* ===== Perspective Section (Behind the Eye) ===== */
-.perspective {
+/* ===== Perspective Section ===== */
+.perspective,
+.intent {
   max-width: 900px;
   margin: 50px auto;
   text-align: left;
@@ -116,14 +127,16 @@ details p {
   border-top: 1px solid #333;
 }
 
-.perspective h2 {
+.perspective h2,
+.intent h2 {
   font-size: 2em;
   margin-bottom: 30px;
   color: #f0e6f6;
   text-align: center;
 }
 
-.perspective p {
+.perspective p,
+.intent p {
   margin-bottom: 25px;
 }
 
@@ -137,7 +150,7 @@ footer {
 
 /* ===== Image Modal (Zoom on Click) ===== */
 .modal {
-  display: none; /* hide by default */
+  display: none; /* hidden by default */
   position: fixed;
   top: 0;
   left: 0;
@@ -148,7 +161,6 @@ footer {
   align-items: center;
   cursor: zoom-out;
   z-index: 999;
-  display: flex; /* flex container for centering image */
 }
 
 .modal img {
@@ -163,27 +175,15 @@ footer {
 
 /* ===== Tab Content (Hide/Show) ===== */
 .tab-content {
-  display: none; /* hide all by default */
+  display: none;
 }
 
-/* ===== Intent Section ===== */
-.intent {
-  max-width: 900px;
-  margin: 50px auto;
-  text-align: left;
-  line-height: 1.8;
-  color: #ccc;
-  padding: 20px;
-  border-top: 1px solid #333;
-}
-
-.intent h2 {
+/* ===== Scroll Hint (Optional) ===== */
+.gallery::after {
+  content: "→";
+  color: #888;
   font-size: 2em;
-  margin-bottom: 30px;
-  color: #f0e6f6;
-  text-align: center;
-}
-
-.intent p {
-  margin-bottom: 25px;
+  position: absolute;
+  right: 20px;
+  pointer-events: none;
 }
