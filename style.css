@@ -137,7 +137,7 @@ footer {
 
 /* ===== Image Modal (Zoom on Click) ===== */
 .modal {
-  display: none;
+  display: none; /* hide by default */
   position: fixed;
   top: 0;
   left: 0;
@@ -148,6 +148,7 @@ footer {
   align-items: center;
   cursor: zoom-out;
   z-index: 999;
+  display: flex; /* flex container for centering image */
 }
 
 .modal img {
