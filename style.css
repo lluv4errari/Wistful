@@ -56,27 +56,24 @@ header .description {
   color: #c0c0c0;
 }
 
-/* ===== Gallery (Horizontal Scroll) ===== */
+/* ===== Gallery Grid (3 per row) ===== */
 .gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* 3-ish per row on desktop */
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+figure {
   display: flex;
-  gap: 20px;
-  overflow-x: auto;
-  padding: 10px 20px;
-  scroll-behavior: smooth;
-}
-
-.gallery::-webkit-scrollbar {
-  height: 8px;
-}
-
-.gallery::-webkit-scrollbar-thumb {
-  background-color: #555;
-  border-radius: 4px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
 
 .gallery img {
-  flex: 0 0 auto;
-  width: 250px; /* image size */
+  width: 100%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 10px 20px rgba(0,0,0,0.5);
@@ -89,15 +86,11 @@ header .description {
   filter: brightness(1.1);
 }
 
-/* ===== Figure & Captions ===== */
-figure {
-  margin: 0;
-}
-
 figcaption {
-  margin-top: 8px;
-  font-size: 0.95em;
+  margin-top: 10px;
+  font-size: 1em;
   color: #ccc;
+  width: 100%;
 }
 
 details summary {
@@ -115,7 +108,7 @@ details p {
   margin-top: 5px;
 }
 
-/* ===== Perspective Section ===== */
+/* ===== Perspective & Intent Sections ===== */
 .perspective,
 .intent {
   max-width: 900px;
@@ -176,14 +169,4 @@ footer {
 /* ===== Tab Content (Hide/Show) ===== */
 .tab-content {
   display: none;
-}
-
-/* ===== Scroll Hint (Optional) ===== */
-.gallery::after {
-  content: "→";
-  color: #888;
-  font-size: 2em;
-  position: absolute;
-  right: 20px;
-  pointer-events: none;
 }
