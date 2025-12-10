@@ -105,9 +105,8 @@ details p {
   margin-top: 5px;
 }
 
-/* ===== Tab Content ===== */
-.tab-content {
-  display: none; /* hide all by default */
+/* ===== Perspective Section (Behind the Eye) ===== */
+.perspective {
   max-width: 900px;
   margin: 50px auto;
   text-align: left;
@@ -117,18 +116,14 @@ details p {
   border-top: 1px solid #333;
 }
 
-.tab-content.active {
-  display: block; /* show active tab */
-}
-
-.tab-content h2 {
+.perspective h2 {
   font-size: 2em;
   margin-bottom: 30px;
   color: #f0e6f6;
   text-align: center;
 }
 
-.tab-content p {
+.perspective p {
   margin-bottom: 25px;
 }
 
@@ -153,6 +148,7 @@ footer {
   align-items: center;
   cursor: zoom-out;
   z-index: 999;
+  display: flex; /* flex container for centering image */
 }
 
 .modal img {
@@ -163,4 +159,31 @@ footer {
   border-radius: 10px;
   object-fit: contain;
   box-shadow: 0 10px 25px rgba(0,0,0,0.7);
+}
+
+/* ===== Tab Content (Hide/Show) ===== */
+.tab-content {
+  display: none; /* hide all by default */
+}
+
+/* ===== Intent Section ===== */
+.intent {
+  max-width: 900px;
+  margin: 50px auto;
+  text-align: left;
+  line-height: 1.8;
+  color: #ccc;
+  padding: 20px;
+  border-top: 1px solid #333;
+}
+
+.intent h2 {
+  font-size: 2em;
+  margin-bottom: 30px;
+  color: #f0e6f6;
+  text-align: center;
+}
+
+.intent p {
+  margin-bottom: 25px;
 }
