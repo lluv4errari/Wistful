@@ -236,7 +236,29 @@ tabs.forEach(tab => {
 
 // Show gallery by default
 showTab("gallery");
+  // your existing modal JS
+  const modal = document.getElementById("imgModal");
+  ...
+  // your existing tab switcher JS
+  ...
+
+  // MUSIC PLAYER JS
+  const toggleBtn = document.getElementById('music-toggle');
+  const iframe = document.getElementById('bg-music');
+
+  let musicPlaying = false;
+
+  toggleBtn.addEventListener('click', () => {
+    const message = musicPlaying ? 
+      '{"event":"command","func":"pauseVideo","args":""}' : 
+      '{"event":"command","func":"playVideo","args":""}';
+
+    iframe.contentWindow.postMessage(message, '*');
+    musicPlaying = !musicPlaying;
+    toggleBtn.textContent = musicPlaying ? '🔇 Pause Music' : '🔊 Play Music';
+  });
 </script>
+
 
 </body>
 </html>
