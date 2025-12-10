@@ -105,8 +105,9 @@ details p {
   margin-top: 5px;
 }
 
-/* ===== Perspective Section (Behind the Eye) ===== */
-.perspective {
+/* ===== Tab Content ===== */
+.tab-content {
+  display: none; /* hide all by default */
   max-width: 900px;
   margin: 50px auto;
   text-align: left;
@@ -116,14 +117,18 @@ details p {
   border-top: 1px solid #333;
 }
 
-.perspective h2 {
+.tab-content.active {
+  display: block; /* show active tab */
+}
+
+.tab-content h2 {
   font-size: 2em;
   margin-bottom: 30px;
   color: #f0e6f6;
   text-align: center;
 }
 
-.perspective p {
+.tab-content p {
   margin-bottom: 25px;
 }
 
@@ -148,7 +153,6 @@ footer {
   align-items: center;
   cursor: zoom-out;
   z-index: 999;
-  display: flex; /* flex container for centering image */
 }
 
 .modal img {
